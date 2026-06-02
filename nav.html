@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Layout</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    background:white;
+    overflow-y:scroll;
+}
+nav{
+    height:70px;
+    background:black;
+    position:sticky;
+    top:0; 
+}
+
+.container{
+    column-count:4;
+    column-gap:15px;
+    padding:20px;
+}
+
+.card{
+    background:#f1f1f1;
+    margin-bottom:15px;
+    border-radius:15px;
+    overflow:hidden;
+
+}
+
+.image{
+    width:100%;
+    background:grey;
+}
+
+.h1{height:220px;}
+.h2{height:300px;}
+.h3{height:180px;}
+.h4{height:260px;}
+
+</style>
+</head>
+<body>
+
+<nav></nav>
+
+<div class="container">
+
+<div class="card"><div class="image h1"></div></div>
+<div class="card"><div class="image h2"></div></div>
+<div class="card"><div class="image h3"></div></div>
+<div class="card"><div class="image h4"></div></div>
+
+<div class="card"><div class="image h1"></div></div>
+<div class="card"><div class="image h2"></div></div>
+<div class="card"><div class="image h3"></div></div>
+<div class="card"><div class="image h4"></div></div>
+
+<div class="card"><div class="image h1"></div></div>
+<div class="card"><div class="image h2"></div></div>
+<div class="card"><div class="image h3"></div></div>
+<div class="card"><div class="image h4"></div></div>
+
+<div class="card"><div class="image h1"></div></div>
+<div class="card"><div class="image h2"></div></div>
+<div class="card"><div class="image h3"></div></div>
+<div class="card"><div class="image h4"></div></div>
+
+</div>
+
+</body>
+</html>
