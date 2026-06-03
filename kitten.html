@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grid Layout</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:black;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    font-family:times new roman;
+}
+
+.container{
+    
+    display:grid;
+    grid-template-columns:180px 320px 180px;
+    grid-template-rows:150px 150px 150px;
+    gap:3px;
+}
+
+.box{
+   
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-weight:bold;
+    border-radius:10px;
+    /* background-image:url("images.png");
+    background-size:cover; */
+}
+
+
+.social{
+    background:#a44ca9;
+    color:white;
+    font-size:22px;
+    justify-content:flex-start;
+    align-items:flex-end;
+    padding:20px;
+    /* background-image:url("images.png"); */
+
+}
+.socialbox{
+    background-image:url("1f43dd2e54928ac9f3411c348a87edb7.jpg");
+    background-size:cover;
+    padding:20px;
+    margin-bottom:50px;
+
+}
+.socialbox2{
+    background-image:url("download.png");
+    background-size:cover;
+    padding:20px;
+    margin-bottom:50px;
+}
+.socialbox3{
+    background-image:url("49877820cb186ef2ee01939ecd488df6.jpg");
+    background-size:cover;
+    padding:20px;
+    margin-bottom:50px;
+}
+.followers{
+    background:#a44ca9;
+    color:white;
+    font-size:60px;
+}
+
+
+.likes{
+    background:#a44ca9;
+    color:white;
+    font-size:60px;
+}
+
+
+.posts{
+    background:#a44ca9;
+    color:white;
+    font-size:68px;
+}
+
+.design{
+    background:#4448c9;
+    color:white;
+    font-size:50px;
+}
+.stats{
+    background:white;
+    border:5px solid #a44ca9;
+    grid-column:3;
+    grid-row:2 / 4;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    gap:60px;
+    font-size:50px;
+    color:black;
+}
+
+.quote{
+    background:#a44ca9;
+    color:white;
+    font-size:30px;
+    grid-column:1 / 3;
+}
+.active{
+    font-size:10px;
+    margin-bottom:60px;
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+    <div class="box social">
+        <div class="socialbox"></div>
+        <div class="socialbox2"></div>
+        <div class="socialbox3"></div>
+       
+    </div>
+
+    <div class="box followers">
+        25K
+    </div>
+
+    <div class="box likes">
+        50k
+    </div>
+
+    <div class="box posts">
+        <div class="active">Active Users:</div>
+        <br>
+        1,538
+    </div>
+
+    <div class="box design">
+        Design
+    </div>
+
+    <div class="box stats">
+        
+        <div>200k</div>
+    </div>
+
+    <div class="box quote">
+        Kal kre so aaj kr aaj kre so aab !<br>
+    </div>
+
+</div>
+
+</body>
+</html>
