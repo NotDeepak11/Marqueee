@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        body{
+            font-family:Arial, sans-serif;
+            background:#1f242b;
+            color:white;
+        }
+
+        .main{
+            display:flex;
+            min-height:100vh;
+        }
+
+        .sidebar{
+            width:250px;
+            background:#343a40;
+            padding:20px;
+        }
+
+        .sidebar h2{
+            margin-bottom:20px;
+        }
+
+        .sidebar ul{
+            list-style:none;
+        }
+
+        .sidebar li{
+            background:#495057;
+            padding:15px;
+            margin-bottom:10px;
+            border-radius:5px;
+            cursor:pointer;
+        }
+
+        .sidebar li:hover{
+            background:#5c636a;
+        }
+
+        .content{
+            flex:1;
+            padding:20px;
+        }
+
+        .cards{
+            display:flex;
+            gap:20px;
+            flex-wrap:wrap;
+            margin-top:20px;
+        }
+
+        .card{
+            flex:1;
+            min-width:220px;
+            height:120px;
+            padding:20px;
+            border-radius:5px;
+        }
+
+        .blue{
+            background:#2179f8;
+        }
+
+        .green{
+            background:#198754;
+        }
+
+        .yellow{
+            background:#ffc107;
+            color:black;
+        }
+
+        .red{
+            background:#dc3545;
+        }
+
+        .card h2{
+            font-size:40px;
+            margin-bottom:10px;
+        }
+
+        .bottom{
+            display:flex;
+            gap:20px;
+            margin-top:30px;
+            align-items:flex-start;
+        }
+
+        .graph{
+            width:70%;
+            background:#2d333b;
+            border:1px solid #555;
+            padding:20px;
+            border-radius:5px;
+        }
+
+        .graph h2{
+            margin-bottom:20px;
+        }
+
+        .chart{
+            width:100%;
+            height:350px;
+            overflow:hidden;
+            border-radius:5px;
+        }
+
+        .chart img{
+            width:100%;
+            height:100%;
+            object-fit:contain;
+            display:block;
+        }
+
+        .map{
+            width:30%;
+            background:#0d6efd;
+            padding:20px;
+            border-radius:5px;
+        }
+
+        .map h2{
+            margin-bottom:20px;
+        }
+
+        .world{
+            width:100%;
+            height:350px;
+            overflow:hidden;
+            background:white;
+            border-radius:5px;
+        }
+
+        .world img{
+            width:100%;
+            height:100%;
+            object-fit:cover;
+            display:block;
+        }
+
+        @media(max-width:1000px){
+            .bottom{
+                flex-direction:column;
+            }
+
+            .graph,
+            .map{
+                width:100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="main">
+
+    <div class="sidebar">
+        <h2>AdminLTE 4</h2>
+
+        <ul>
+            <li>Dashboard</li>
+            <li>Dashboard v1</li>
+            <li>Dashboard v2</li>
+            <li>Dashboard v3</li>
+            <li>Widgets</li>
+            <li>Forms</li>
+            <li>Tables</li>
+            <li>Pages</li>
+        </ul>
+    </div>
+
+    <div class="content">
+
+        <h1>Dashboard</h1>
+
+        <div class="cards">
+
+            <div class="card blue">
+                <h2>150</h2>
+                <p>New Orders</p>
+            </div>
+
+            <div class="card green">
+                <h2>53%</h2>
+                <p>Bounce Rate</p>
+            </div>
+
+            <div class="card yellow">
+                <h2>44</h2>
+                <p>User Registration</p>
+            </div>
+
+            <div class="card red">
+                <h2>65</h2>
+                <p>Visitors</p>
+            </div>
+
+        </div>
+
+        <div class="bottom">
+
+            <div class="graph">
+                <h2>Sales Value</h2>
+
+                <div class="chart">
+                    <img src="Screenshot 2026-06-05 114044.png" alt="Sales Chart">
+                </div>
+            </div>
+
+            <div class="map">
+                <h2>World Map</h2>
+
+                <div class="world">
+                    <img src="Screenshot 2026-06-05 111747.png" alt="World Map">
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
