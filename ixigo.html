@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ixigo Clone</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#f5f5f5;
+}
+
+.navbar{
+    height:90px;
+    background:white;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 35px;
+    border-bottom:1px solid #ddd;
+}
+
+.logo{
+    width:100px;
+    height:48px;
+    background:#f26d21;
+    color:white;
+    font-size:32px;
+    font-weight:bold;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border-radius:6px;
+}
+
+.nav-right{
+    display:flex;
+    gap:40px;
+    align-items:center;
+    font-size:18px;
+}
+
+.login{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.profile{
+    width:45px;
+    height:45px;
+    border-radius:50%;
+    background:#dbeafe;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.container{
+    width:96%;
+    margin:30px auto;
+}
+
+.menu{
+    display:flex;
+    gap:50px;
+    margin-bottom:25px;
+    align-items:center;
+}
+
+.menu-item{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-size:22px;
+    color:#444;
+    font-weight:bold;
+    padding-bottom:12px;
+}
+
+.menu-item:first-child{
+    border-bottom:4px solid #1e73ff;
+}
+
+.icon{
+    width:55px;
+    height:55px;
+    border-radius:50%;
+    overflow:hidden;
+    background:#eef3ff;
+}
+
+.icon img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.search-box{
+    background:white;
+    border-radius:25px;
+    padding:25px;
+    box-shadow:0 3px 10px rgba(0,0,0,.1);
+}
+
+.trip{
+    display:flex;
+    gap:15px;
+    margin-bottom:20px;
+}
+
+.trip button{
+    padding:12px 25px;
+    border-radius:25px;
+    border:1px solid #1e73ff;
+    background:white;
+    font-size:18px;
+    cursor:pointer;
+}
+
+.trip .active{
+    color:#1e73ff;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:2fr 2fr 1.3fr 1.3fr 1.5fr 1fr;
+}
+
+.card{
+    background:#fafafa;
+    border:1px solid #e5e5e5;
+    padding:25px;
+}
+
+.label{
+    color:#888;
+    font-size:14px;
+    margin-bottom:10px;
+}
+
+.value{
+    font-size:24px;
+    color:#333;
+}
+
+.search-btn{
+    background:#ff7a00;
+    color:white;
+    font-size:28px;
+    font-weight:bold;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border-radius:0 15px 15px 0;
+}
+
+.special{
+    margin-top:25px;
+    display:flex;
+    gap:15px;
+    align-items:center;
+}
+
+.tag{
+    padding:10px 18px;
+    border:1px solid #ccc;
+    border-radius:20px;
+    background:white;
+}
+
+.cancel{
+    margin-top:20px;
+    background:#eef4fa;
+    padding:18px;
+    border-radius:10px;
+    color:#666;
+    
+}
+
+.heading{
+    margin:40px 0 20px;
+    font-size:25px;
+}
+
+.features{
+    background:white;
+    border-radius:25px;
+    box-shadow:0 3px 10px rgba(0,0,0,.1);
+    display:grid;
+    grid-template-columns:repeat(6,1fr);
+    padding:30px 10px;
+}
+
+.feature{
+    text-align:center;
+    border-right:1px solid #ddd;
+}
+
+.feature:last-child{
+    border-right:none;
+}
+
+.feature-icon{
+    font-size:50px;
+    margin-bottom:15px;
+}
+
+.feature p{
+    font-size:20px;
+    color:#444;
+}
+</style>
+</head>
+<body>
+
+<div class="navbar">
+    <div class="logo">ixigo</div>
+
+    <div class="nav-right">
+        <span>🎟 Offers</span>
+        <span>💬 Customer Service</span>
+
+        <div class="login">
+            <div class="profile">👤</div>
+            <span>Log in / Sign up</span>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+
+    <div class="menu">
+
+        <div class="menu-item">
+            <div class="icon">
+                <img src="https://images.ixigo.com/image/upload/Header/2af43f961dddc6cfb02254712f0df058-rbzyb.webp">
+            </div>
+            Flights
+        </div>
+
+        <div class="menu-item">
+            <div class="icon">
+                <img src="https://images.ixigo.com/image/upload/Header/2fa9ebf005adc1ed6473d6229aedfaa5-dwtqq.webp">
+            </div>
+            Hotels
+        </div>
+
+        <div class="menu-item">
+            <div class="icon">
+                <img src="https://images.ixigo.com/image/upload/Header/d2db102bf758f425496336d908a598b8-dttji.webp">
+            </div>
+            Trains
+        </div>
+
+        <div class="menu-item">
+            <div class="icon">
+                <img src="https://images.ixigo.com/image/upload/Header/23928375e30875ccd2ba5613aae81763-qqyww.webp">
+            </div>
+            Buses
+        </div>
+
+    </div>
+
+    <div class="search-box">
+
+        <div class="trip">
+            <button class="active">One Way</button>
+            <button>Round Trip</button>
+        </div>
+
+        <div class="grid">
+
+            <div class="card">
+                <div class="label">From</div>
+                <div class="value"></div>
+            </div>
+
+            <div class="card">
+                <div class="label">To</div>
+                <div class="value"></div>
+            </div>
+
+            <div class="card">
+                <div class="label">Departure</div>
+                <div class="value">07 Jun</div>
+            </div>
+
+            <div class="card">
+                <div class="label">Return</div>
+                <div class="value">--</div>
+            </div>
+
+            <div class="card">
+                <div class="label">Travellers & Class</div>
+                <div class="value">1 Traveller</div>
+            </div>
+
+            <div class="search-btn">
+                Search
+            </div>
+
+        </div>
+
+        <div class="special">
+            <h3>Special Fares</h3>
+            <div class="tag">Student</div>
+            <div class="tag">Senior Citizen</div>
+            <div class="tag">Armed Forces</div>
+        </div>
+
+        <div class="cancel">
+            Always opt for Free Cancellation • ₹0 cancellation fee • Instant refunds • Priority customer service
+        </div>
+
+    </div>
+
+    <h2 class="heading">Do More With ixigo</h2>
+
+    <div class="features">
+
+        <div class="feature">
+            <div class="feature-icon"></div>
+            <p>Flight Tracker</p>
+        </div>
+
+        <div class="feature">
+            <div class="feature-icon"></div>
+            <p>Credit Card</p>
+        </div>
+
+        <div class="feature">
+            <div class="feature-icon"></div>
+            <p>Book Visa</p>
+        </div>
+
+        <div class="feature">
+            <div class="feature-icon"></div>
+            <p>Group Booking</p>
+        </div>
+
+        <div class="feature">
+            <div class="feature-icon"></div>
+            <p>Plan</p>
+        </div>
+
+        <div class="feature">
+            <div class="feature-icon"></div>
+            <p>Fare Alerts</p>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
