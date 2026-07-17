@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+        
+            background-color: aqua;
+            height: 200px;
+            width: 200px;
+            border: 2px solid red;
+            animation: divSlide 3s ease 2s forwards;
+            animation-delay: 1s;
+        }
+        @keyframes divSlide{
+            0%{
+                transform: translateX(0);
+            }
+            25%{
+                transform: translateX(1000px);
+            }
+            50%{
+                transform: translate(1000px,600px);
+            }
+            75%{
+                transform: translatey(600px);
+            }
+
+        }
+        .container1{
+           
+            background-color: aqua;
+            height: 200px;
+            width: 200px;
+            border: 2px solid red;
+            animation: divSlide2 3s ease 2s forwards;
+        }
+        @keyframes divSlide2{
+            
+            0%{
+                
+                transform: translateX(0);
+            }
+            25%{
+                transform: translateX(1000px);
+            }
+            50%{
+                transform: translate(1000px,600px);
+            }
+            75%{
+                transform: translatey(600px);
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container"></div>
+    <div class="container1"></div>
+</body>
+</html>

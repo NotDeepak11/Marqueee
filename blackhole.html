@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Black Hole Animation</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+    background:radial-gradient(circle,#1b2735,#090a0f);
+}
+
+/* Black Hole */
+
+.black-hole{
+    width:140px;
+    height:140px;
+    border-radius:50%;
+    background:black;
+    position:relative;
+    box-shadow:
+    0 0 20px purple,
+    0 0 50px blue,
+    0 0 90px cyan;
+
+    animation:spin 6s linear infinite;
+}
+
+/* Light Rays */
+
+.ray{
+    position:absolute;
+    width:10px;
+    height:10px;
+    border-radius:50%;
+    background:white;
+    left:50%;
+    top:50%;
+    transform-origin:-220px center;
+
+    animation:fall 3s linear infinite;
+}
+
+.r1{
+    animation-delay:0s;
+}
+
+.r2{
+    animation-delay:.5s;
+}
+
+.r3{
+    animation-delay:1s;
+}
+
+.r4{
+    animation-delay:1.5s;
+}
+
+.r5{
+    animation-delay:2s;
+}
+
+.r6{
+    animation-delay:2.5s;
+}
+
+/* Orbit Ring */
+
+.ring{
+    position:absolute;
+    width:200px;
+    height:200px;
+    border:4px solid rgba(255,255,255,.2);
+    border-radius:50%;
+
+    animation:rotateRing 4s linear infinite;
+}
+
+/* Stars */
+
+.star{
+    position:absolute;
+    width:3px;
+    height:3px;
+    background:white;
+    border-radius:50%;
+
+    animation:twinkle 2s infinite alternate;
+}
+
+.s1{top:15%;left:20%;}
+.s2{top:25%;left:80%;}
+.s3{top:70%;left:15%;}
+.s4{top:80%;left:75%;}
+.s5{top:50%;left:90%;}
+.s6{top:10%;left:60%;}
+
+@keyframes spin{
+
+0%{
+transform:rotate(0deg);
+}
+
+100%{
+transform:rotate(360deg);
+}
+
+}
+
+@keyframes rotateRing{
+
+0%{
+transform:rotate(0deg);
+}
+
+100%{
+transform:rotate(-360deg);
+}
+
+}
+
+@keyframes fall{
+
+0%{
+transform:rotate(0deg) translateX(220px) scale(1);
+opacity:1;
+}
+
+100%{
+transform:rotate(360deg) translateX(0px) scale(0);
+opacity:0;
+}
+
+}
+
+@keyframes twinkle{
+
+from{
+opacity:.2;
+transform:scale(.5);
+}
+
+to{
+opacity:1;
+transform:scale(2);
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="star s1"></div>
+<div class="star s2"></div>
+<div class="star s3"></div>
+<div class="star s4"></div>
+<div class="star s5"></div>
+<div class="star s6"></div>
+
+<div class="ring"></div>
+
+<div class="black-hole">
+
+<div class="ray r1"></div>
+<div class="ray r2"></div>
+<div class="ray r3"></div>
+<div class="ray r4"></div>
+<div class="ray r5"></div>
+<div class="ray r6"></div>
+
+</div>
+
+</body>
+</html>
